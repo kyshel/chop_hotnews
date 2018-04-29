@@ -1,0 +1,35 @@
+  {
+  	"name": "Chop Hot-news",
+  	"version": "0.1",
+  	"description": "Chop the sidebar",
+  	"background": {
+  		"scripts": ["background.js"],
+  		"persistent": false
+  	},
+  	"page_action": {
+  		"default_popup": "popup.html",
+  		"default_icon": {
+        "16": "images/chop_hotnews.png",
+        "32": "images/chop_hotnews.png",
+        "48": "images/chop_hotnews.png",
+        "128": "images/chop_hotnews.png"
+      }
+    },
+    "icons": {
+        "16": "images/chop_hotnews.png",
+        "32": "images/chop_hotnews.png",
+        "48": "images/chop_hotnews.png",
+        "128": "images/chop_hotnews.png"
+    },
+    "permissions": ["declarativeContent", "storage","tabs"],
+    "manifest_version": 2,
+
+    "content_scripts": [
+     {
+       "matches": ["https://www.baidu.com/*"],
+       "js": ["chop.js"]
+     }
+   ]
+
+
+  }
